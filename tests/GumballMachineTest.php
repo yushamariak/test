@@ -2,19 +2,18 @@
 
 require 'GumballMachine.php';
 
-class GumballMachineTest extends PHPUnit_Framework_TestCase
-{
-    public $gumballMachineInstance;
+class GumballMachineTest extends PHPUnit_Framework_TestCase {
+	public $gumballMachineInstance;
 
-    public function setUp(){
+	public function setUp() {
 		$this->gumballMachineInstance = new GumballMachine();
 	}
 
-	public function testIfWheelWorks(){
+	public function testIfWheelWorks() {
 		$this->gumballMachineInstance->setGumballs(100);
 
 		$this->gumballMachineInstance->turnWheel();
 
-		$this->assertEquals(99, $this->gumballMachineInstance->getGumballs(100);
+		$this->assertEquals(99, $this->gumballMachineInstance->getGumballs(100));
 	}
 }
